@@ -1,0 +1,49 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+html {
+  list-style: none;
+  font-size: larger;
+  padding: 25px;
+}
+
+body {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.margin {
+  margin: 25px;
+  align-items: center;
+}
+
+.padding {
+  padding: 5px;
+  margin: 10px;
+  transition: .5s;
+}
+
+.padding:hover {
+  background-color: rgb(238, 238, 238);
+}

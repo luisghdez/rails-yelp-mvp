@@ -1,0 +1,33 @@
+
+
+<div class='d-flex justify-content-center'>
+  <div class='margin'>
+    <h1>Restaurants</h1>
+    <p>Best restaurants in the city</p>
+    <% @restaurants.each do |r| %>
+    <div class="card padding" style="width: 18rem;">
+      <img class="card-img-top" src=<%= @images.sample %> alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= r.name %></h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <%= link_to 'GO', restaurant_path(r)%>
+    </div>
+    </div>
+    <% end %>
+    <br>
+    <%= link_to '+ Add a restaurant', new_restaurant_path, class: "btn btn-primary" %>
+  </div>
+  <div class='map'>
+    <img src="https://www.technobuffalo.com/sites/technobuffalo.com/files/styles/large/public/wp/2013/05/google-maps-pizza-new-york-crop-vertical.jpg" alt="" style="height: 100vh;
+    position: sticky;
+    top: 0;">
+  </div>
+</div>
+
+
+<%# <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href=<% restaurant_path(r) %>
